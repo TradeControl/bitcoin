@@ -1,0 +1,26 @@
+﻿<Window x:Class="TradeControl.Bitcoin.MnemomicsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TradeControl.Bitcoin"
+        mc:Ignorable="d"
+        Title="New Wallet" Height="230.336" Width="544.763" WindowStyle="SingleBorderWindow" Icon="Key.ico" ResizeMode="NoResize" ShowInTaskbar="False" Loaded="Window_Loaded" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Mnenomic: " Padding="10" FontWeight="Bold" HorizontalAlignment="Left" />
+        <TextBox x:Name="textMnenomics" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Margin="10" Padding="5" TextWrapping="Wrap" FontSize="15" />
+        <Button x:Name="btnNew" Content="Create" Grid.Column="1" Grid.Row="1" Height="30" VerticalAlignment="Top" Margin="10" IsDefault="True" Click="btnNew_Click" />
+        <Button x:Name="btnCancel" Content="Cancel" Grid.Column="1" Grid.Row="2" Height="30" VerticalAlignment="Top" Margin="10,0,10,10" IsCancel="True" />
+        <TextBlock Grid.Row="3" Text="Important: write these words down and store in a safe." Padding="10" HorizontalAlignment="Left" Margin="0,0,0,10" />
+    </Grid>
+</Window>

@@ -5,10 +5,15 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B600B3D5-B773-4DF5-97DB-1908540F6F7C}"
 	ProjectSection(SolutionItems) = preProject
+		..\changelog.md = ..\changelog.md
 		..\readme.md = ..\readme.md
+		..\docs\tc_bitcoin_demo.md = ..\docs\tc_bitcoin_demo.md
+		..\docs\tc_bitcoin_spec.md = ..\docs\tc_bitcoin_spec.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcBitcoin", "tcBitcoin\tcBitcoin.csproj", "{AFBFA771-B42E-4879-AEAC-2A0E69E685DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcBitcoin.Wallet", "tcBitcoin.Wallet\tcBitcoin.Wallet.csproj", "{B63728B1-E13D-4340-A627-E4EABCC454D7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "tcBitcoin.Installer", "tcBitcoin.Installer\tcBitcoin.Installer.vdproj", "{A2D8DF9B-FE63-4236-8846-F8490DD970E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +21,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AFBFA771-B42E-4879-AEAC-2A0E69E685DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFBFA771-B42E-4879-AEAC-2A0E69E685DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFBFA771-B42E-4879-AEAC-2A0E69E685DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFBFA771-B42E-4879-AEAC-2A0E69E685DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63728B1-E13D-4340-A627-E4EABCC454D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63728B1-E13D-4340-A627-E4EABCC454D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63728B1-E13D-4340-A627-E4EABCC454D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63728B1-E13D-4340-A627-E4EABCC454D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D8DF9B-FE63-4236-8846-F8490DD970E8}.Debug|Any CPU.ActiveCfg = Debug
+		{A2D8DF9B-FE63-4236-8846-F8490DD970E8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

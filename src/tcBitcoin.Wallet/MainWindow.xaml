@@ -1,0 +1,118 @@
+﻿<Window x:Class="TradeControl.Bitcoin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TradeControl.Bitcoin"
+        mc:Ignorable="d"
+        Title="Cash Account" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem Header="Connection" Name="MenuItemConnection" Click="MenuItemConnection_Click"/>
+                <MenuItem Header="Settings" Name="MenuItemSettings" Click="MenuItemSettings_Click"/>
+                <Separator />
+                <MenuItem Header="Exit" Click="MenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="Wallet">
+                <MenuItem Header="New..." x:Name="MenuItemNewWallet" Click="MenuItemNewWallet_Click"/>
+                <MenuItem Header="Mnemonics" Name="MenuItemMnemonics" Click="MenuItemMnemonics_Click"/>
+                <Separator />
+                <MenuItem Header="Open" Name="MenuItemOpenWallet" Click="MenuItemOpenWallet_Click"/>
+                <MenuItem Header="Save" Name="MenuItemSaveWallet" IsEnabled="False" Click="MenuItemSaveWallet_Click"/>
+                <MenuItem Header="Close" Name="MenuItemCloseWallet" IsEnabled="False" Click="MenuItemCloseWallet_Click"/>
+                <Separator />
+                <MenuItem Header="Refresh" Name="MenuItemRefresh" IsEnabled="False" Click="MenuItemRefresh_Click" />
+                <MenuItem Header="Receive coins..." Name="MenuItemSendReceive" IsEnabled="False" Click="tvWalletMenuItemSendReceive_Click" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="About" Name="MenuItemAbout" Click="MenuItemAbout_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="52.805"/>
+                <ColumnDefinition Width="10.195"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Account: " Padding="5" FontWeight="Bold" HorizontalAlignment="Left" Grid.ColumnSpan="3" />
+            <ComboBox x:Name="cbCashAccount" IsEditable="False" Grid.Column="2" Grid.Row="0" Margin="4" SelectionChanged="cbCashAccount_SelectionChanged" />
+            <Grid Grid.Column="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Namespace: " Padding="5" FontWeight="Bold"/>
+                <TextBlock Grid.Column="1" Padding="5" x:Name="textNamespace" FontWeight="Bold" Foreground="Blue" Margin="0,2,0,2" />
+                <TextBlock Grid.Column="2" Padding="5" x:Name="textBalance" FontWeight="Bold" Margin="2" />
+            </Grid>
+            
+            <GridSplitter Grid.Column="3" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" ShowsPreview="True" Grid.RowSpan="2" />
+            <TreeView x:Name="tvWallet" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="5" Grid.ColumnSpan="3" SelectedItemChanged="tvWallet_SelectedItemChanged" ContextMenuService.ShowOnDisabled="False" ContextMenuOpening="tvWallet_ContextMenuOpening" >
+                <TreeView.ContextMenu >
+                    <ContextMenu>
+                        <MenuItem Header="New Name..." Name="tvWalletMenuItemNew" Click="tvWalletMenuItemNew_Click" />
+                        <Separator />
+                        <MenuItem Header="Rename" Name="tvWalletMenuItemRename" Click="tvWalletMenuItemRename_Click" />
+                        <MenuItem Header="Delete" Name="tvWalletMenuItemDelete" Click="tvWalletMenuItemDelete_Click" />
+                        <Separator />
+                        <MenuItem Header="New Receipt Key" Name="tvWalletMenuItemNewReceipt" Click="tvWalletMenuItemNewReceipt_Click" />
+                        <MenuItem Header="Miscellaneous Payment" Name="tvWalletMenuItemMiscPayment" Click="tvWalletMenuItemMiscPayment_Click" />
+                        <MenuItem Header="Key Transfer" Name="tvWalletMenuItemTransfer" Click="tvWalletMenuItemTransfer_Click" />
+                        <Separator />
+                        <MenuItem Header="Receive coins..." Name="tvWalletMenuItemSendReceive" Click="tvWalletMenuItemSendReceive_Click" />
+                    </ContextMenu>
+                </TreeView.ContextMenu>
+
+            </TreeView>
+
+            <TabControl x:Name="tabAccountDetails" Grid.Column="4" Grid.Row="1" Margin="5" BorderBrush="LightGray" BorderThickness="1" TabStripPlacement="Bottom" SelectionChanged="tabAccountDetails_SelectionChanged" >
+                <TabItem Header="Transactions" Name="pageTransactions" />
+                <TabItem Header="To Receive" Name="pageToReceive" />
+                <TabItem Header="To Pay" Name="pageToPay" />
+                <TabItem Header="Receipt Keys" Name="pageReceiptKeys" />
+                <TabItem Header="Change Keys" Name="pageChangeKeys" />
+            </TabControl>
+        </Grid>
+
+        <StatusBar Grid.Row="2">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="0">
+                <Label x:Name="lbConnection" Content="..."/>
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="1">
+                <TextBlock x:Name="lbProgressTag" Text="Sync:" Visibility="Collapsed" />
+            </StatusBarItem>
+            <StatusBarItem Grid.Column="2">
+                <ProgressBar Height="18" x:Name="progressBar" Maximum="100" Minimum="0" Value="0" Width="100" Visibility="Collapsed" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

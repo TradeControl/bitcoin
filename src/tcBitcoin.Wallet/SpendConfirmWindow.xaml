@@ -1,0 +1,63 @@
+﻿<Window x:Class="TradeControl.Bitcoin.SpendConfirmWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TradeControl.Bitcoin"
+        mc:Ignorable="d"
+        Title="Spend Confirmation" Height="327" Width="800"   WindowStartupLocation="CenterOwner" WindowStyle="SingleBorderWindow" ShowInTaskbar="False" Icon="Bitcoin.ico" Loaded="Window_Loaded">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="To Address:" Margin="5" Padding="5" />
+        <TextBlock x:Name="textAddressTo" Grid.Column="1" Margin="5" Padding="5" FontWeight="Bold" Foreground="Blue" />
+        <Label Content="Send:" Grid.Column="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textTxInAmount" Grid.Column="3" FontWeight="Bold" Text="0.0" TextAlignment="Right"  Margin="5" Padding="5" />
+
+        <Label Content="Spend:" Grid.Row="1" Grid.Column="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textSpendAmount" Grid.Row="1" Grid.Column="3" FontWeight="Bold" Text="0.0" TextAlignment="Right"  Margin="5" Padding="5" />
+        <Label Content="From:" Grid.Row="1" Margin="5" Padding="5" />
+        <TextBlock x:Name="textKeyName" Grid.Row="1" Grid.Column="1" Margin="5" Padding="5" FontWeight="Bold" />
+
+        <Label Content="Change Addresss:" Grid.Row="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textAddressChange" Grid.Row="2" Grid.Column="1" Margin="5" Padding="5" FontWeight="Bold" Foreground="Blue" />
+        <Label Content="Fee:" Grid.Row="2" Grid.Column="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textMinersFee" Grid.Row="2" Grid.Column="3" FontWeight="Bold" Text="0.0"  TextAlignment="Right"  Margin="5" Padding="5" />
+        <Label Content="Change:" Grid.Row="3" Grid.Column="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textChangeAmount" Grid.Row="3" Grid.Column="3" FontWeight="Bold" Text="0.0" TextAlignment="Right"  Margin="5" Padding="5" />
+
+        <Label Content="Message:" Grid.Row="3" Margin="5" Padding="5" />
+        <TextBlock x:Name="textTxMessage" Grid.Row="3" Grid.Column="1" Grid.RowSpan="2" Margin="5" Padding="5" />
+        <Label Content="New Balance:" Grid.Row="4" Grid.Column="2" Margin="5" Padding="5" />
+        <TextBlock x:Name="textBalance" Grid.Row="4" Grid.Column="3" Text="0.0" FontWeight="Bold" HorizontalAlignment="Right"  Margin="5" Padding="5" /> 
+
+        <Grid Grid.Row="7" Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button x:Name="btnSpend" IsDefault="True" Content="SPEND" Margin="5"  Click="btnSpend_Click" />
+            <Button x:Name="btnCancel" Grid.Column="1" IsCancel="True" Content="CANCEL" Margin="5" />
+        </Grid>
+
+    </Grid>
+</Window>

@@ -13,6 +13,7 @@ Because you can [connect Trade Control nodes together](https://github.com/tradec
 ## Documentation
 
 - [Bitcoin Wallet Demo](docs/tc_bitcoin_demo.md)
+- [Commercial Wallets](https://github.com/iamonnox/tradecontrol/blob/master/docs/tc_bitcoin.md) (an article by the author)
 
 ## Installation
 

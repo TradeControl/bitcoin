@@ -9,7 +9,7 @@ Demonstrates:
 5. pay invoices and account balances
 6. miscellaneous payments
 
-We build upon the [Network Demo](https://github.com/tradecontrol/tc-network/blob/master/docs/tc_network_demo.md) to show how supply chains can be financed using bitcoin. However, your customers and suppliers do not need to be connected to the network for you to use the wallet instead of a bank account. Even if they pay into your fiat account, you can easily transfer these funds into the wallet from an exchange.
+We build upon the [Network Demo](https://github.com/tradecontrol/network/blob/master/docs/tc_network_demo.md) to show how supply chains can be financed using bitcoin. However, your customers and suppliers do not need to be connected to the network for you to use the wallet instead of a bank account. Even if they pay into your fiat account, you can easily transfer these funds into the wallet from an exchange.
 
 ## Preparation
 
@@ -21,7 +21,7 @@ The client Administration page shows the company settings:
 
 ![Administration](../img/btc_demo_admin.png)
 
-Work through the network demo until you reach [the section on events and transmissions](https://github.com/tradecontrol/tc-network/blob/master/docs/tc_network_demo.md#events-and-transmissions), but don't bother to change the quantities. In so doing, you will have created three companies, connected together in [a supply chain](https://github.com/iamonnox/tradecontrol/blob/master/docs/tc_functions.md#supply-and-demand): Retail -> Secondary Industry -> Primary Industry. Quantity flows up the network (PI -> SI -> RETAIL) whereas value flows down (RETAIL -> SI -> PI). We are going to use the bitcoin blockchain to transact the latter.
+Work through the network demo until you reach [the section on events and transmissions](https://github.com/tradecontrol/network/blob/master/docs/tc_network_demo.md#events-and-transmissions), but don't bother to change the quantities. In so doing, you will have created three companies, connected together in [a supply chain](https://github.com/iamonnox/tradecontrol/blob/master/docs/tc_functions.md#supply-and-demand): Retail -> Secondary Industry -> Primary Industry. Quantity flows up the network (PI -> SI -> RETAIL) whereas value flows down (RETAIL -> SI -> PI). We are going to use the bitcoin blockchain to transact the latter.
 
 Open the Company Statement of the manufacturer (SI) and you will see their transaction-grained balance sheet measured in bitcoin (**mBTC**):
 
@@ -99,7 +99,7 @@ Secondly, the Sales key is selected in the wallet that fully expresses a namespa
 
 ### Delivery
 
-Let's start delivering stuff.  Return to the [network demo](https://github.com/tradecontrol/tc-network/blob/master/docs/tc_network_demo.md#events-and-transmissions) by logging onto the Plastic Provider and invoicing the first material consignment. From the Providers wallet, create a new payment address for the invoice. This address will be sent over the Ethereum blockchain to the customer.
+Let's start delivering stuff.  Return to the [network demo](https://github.com/tradecontrol/network/blob/master/docs/tc_network_demo.md#events-and-transmissions) by logging onto the Plastic Provider and invoicing the first material consignment. From the Providers wallet, create a new payment address for the invoice. This address will be sent over the Ethereum blockchain to the customer.
 
 ![Payment Address](../img/btc_demo_payment_address.png)
 
@@ -107,7 +107,7 @@ Only the owner of the Invoice Contract on the Ethereum blockchain can assign a p
 
 ![Invoice Mirror](../img/btc_demo_invoice_mirror.png)
 
-Now the manufacturer has the plastic needed to manufacture the boxes. This process is described in the [BOM Demo](https://github.com/tradecontrol/tc-office/blob/master/docs/tc_demo_manufacturing.md). Here, we are only interested in the financial transaction, so we are going to skip through the production process and forthwith despatch the boxes to the customer. The method is identical to that carried out by the Plastic Provider and is described in the network demo. Once you have despatched and invoiced the boxes, connect to the tcTHEBUS node and open their wallet (from a file or mnemonic). Choose the namespace into which you want payment:
+Now the manufacturer has the plastic needed to manufacture the boxes. This process is described in the [BOM Demo](https://github.com/tradecontrol/office/blob/master/docs/tc_demo_manufacturing.md). Here, we are only interested in the financial transaction, so we are going to skip through the production process and forthwith despatch the boxes to the customer. The method is identical to that carried out by the Plastic Provider and is described in the network demo. Once you have despatched and invoiced the boxes, connect to the tcTHEBUS node and open their wallet (from a file or mnemonic). Choose the namespace into which you want payment:
 
 ![Payment Address2](../img/btc_demo_payment_address2.png)
 

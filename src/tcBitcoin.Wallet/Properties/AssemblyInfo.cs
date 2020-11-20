@@ -3,7 +3,7 @@ Trade Control Wallet
 
 Date: 1.6.20
 
-Documentation on github.com/tradecontrol/tc-bitcoin
+Documentation on github.com/tradecontrol/bitcoin
 
 Trade Control by Trade Control Ltd is licensed under GNU General Public License v3.0. 
 

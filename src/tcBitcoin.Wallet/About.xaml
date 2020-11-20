@@ -19,7 +19,7 @@
             <Label Name="lbAssemblyVersion" Content="0.0.0.0" />
             <TextBlock TextWrapping="Wrap" Margin="5,10,0,0" VerticalAlignment="Top" >
                         For guidance consult the 
-                        <Hyperlink NavigateUri="http://github.com/tradecontrol/tc-bitcoin/" RequestNavigate="Hyperlink_RequestNavigate" >on-line help</Hyperlink>.
+                        <Hyperlink NavigateUri="http://github.com/tradecontrol/bitcoin/" RequestNavigate="Hyperlink_RequestNavigate" >on-line help</Hyperlink>.
             </TextBlock>
         </StackPanel>
 

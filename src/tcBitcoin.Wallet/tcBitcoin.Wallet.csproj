@@ -101,7 +101,7 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="TradeControl.Node">
-      <HintPath>..\..\..\tc-nodecore\src\tcNode\bin\Debug\TradeControl.Node.dll</HintPath>
+      <HintPath>..\..\..\sqlnode\src\tcNode\bin\Debug\TradeControl.Node.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />

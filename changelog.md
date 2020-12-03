@@ -1,13 +1,12 @@
-# Change Log
+# Changes
 
-The following record logs changes to the full release of the Trade Control bitcoin wallet. Checked items are included in the latest master commit.
+Proposed changes to the next release of the wallet. Checked items are completed but not yet released in the master commit.
 
-## 1.1.0
-
-Released 1 August 2020
-
-## 1.2.0
+## 1.1.1
 
 - [ ] export hardened keys for departmental wallets
 - [ ] wallet transfer accruals
-- [ ] technical specification
+
+## 1.2.0
+
+- [ ] integrate side-chaining

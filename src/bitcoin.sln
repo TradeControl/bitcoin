@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{B600B3D5-B
 	ProjectSection(SolutionItems) = preProject
 		..\changelog.md = ..\changelog.md
 		..\readme.md = ..\readme.md
-		..\docs\tc_bitcoin_demo.md = ..\docs\tc_bitcoin_demo.md
-		..\docs\tc_bitcoin_spec.md = ..\docs\tc_bitcoin_spec.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcBitcoin.Wallet", "tcBitcoin.Wallet\tcBitcoin.Wallet.csproj", "{B63728B1-E13D-4340-A627-E4EABCC454D7}"

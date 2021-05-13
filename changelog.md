@@ -1,12 +1,12 @@
-# Changes
+# Change Log
 
-Proposed changes to the next release of the wallet. Checked items are completed but not yet released in the master commit.
+Changes to version 1.1.0, published 1 August 2020.
 
-## 1.1.1
+## 1.2
 
 - [ ] export hardened keys for departmental wallets
 - [ ] wallet transfer accruals
 
-## 1.2.0
+## 1.3
 
 - [ ] integrate side-chaining

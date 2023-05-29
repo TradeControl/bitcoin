@@ -8,7 +8,7 @@ First published on 1 August 2020
 
 ## Documentation
 
-- [overview](https://tradecontrol.github.io/bitcoin)
+- [overview](https://tradecontrol.github.io/tutorials/bitcoin_overview)
 - [installation](https://tradecontrol.github.io/tutorials/installing-bitcoin)
 - [tutorial](https://tradecontrol.github.io/tutorials/bitcoin)
 

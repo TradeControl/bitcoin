@@ -206,7 +206,7 @@ namespace TradeControl.Bitcoin
 
                 foreach (var coin in receivedCoins)
                 {
-                    if (coin.TxOut.ScriptPubKey == key.PrivateKey.ScriptPubKey)
+                    if (coin.TxOut.ScriptPubKey == key.PrivateKey.GetScriptPubKey(ScriptPubKeyType.Segwit))
                     {
                         outPointToSpend = coin.Outpoint;
                         txId.MoneyOut += (Money)coin.Amount;
@@ -243,7 +243,7 @@ namespace TradeControl.Bitcoin
                     };
 
                     foreach (var coin in op.ReceivedCoins)
-                        if (coin.TxOut.ScriptPubKey == key.PrivateKey.ScriptPubKey)
+                        if (coin.TxOut.ScriptPubKey == key.PrivateKey.GetScriptPubKey(ScriptPubKeyType.Segwit))
                             txid.MoneyIn += (Money)coin.Amount;
 
                     var transactionResponse = Spend.Api.GetTransaction(op.TransactionId).Result;
@@ -254,7 +254,7 @@ namespace TradeControl.Bitcoin
                     foreach (TxIn input in inputs)
                     {
                         OutPoint previousOutpoint = input.PrevOut;
-                        if (input.ScriptSig == key.PrivateKey.ScriptPubKey)
+                        if (input.ScriptSig == key.PrivateKey.GetScriptPubKey(ScriptPubKeyType.Segwit))
                             Inputs.Add(previousOutpoint.Hash);
                     }
 

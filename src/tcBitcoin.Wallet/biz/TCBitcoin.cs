@@ -562,7 +562,7 @@ namespace TradeControl.Bitcoin
             br.Close();
 
             hdRoot = new ExtKey();
-            hdRoot.FromBytes(rootBytes);
+            hdRoot = ExtKey.CreateFromBytes(rootBytes);
 
             if (hdRoot != null)
                 IsWalletLoaded = true;

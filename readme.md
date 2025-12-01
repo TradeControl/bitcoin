@@ -4,17 +4,20 @@ Mapping a bitcoin wallet to a [trade control node](https://github.com/tradecontr
 
 First published on 1 August 2020
 
-[development schedule](changelog.md)
+# ⏸️ On-Hold Notice
+
+This repository is currently **on hold**.  
+
+It contains operational prototypes and user guides that will be re‑implemented in the new AI‑native ERP framework.  
+
+Development will resume after the full release of the associated [ASP.NET project](https://github.com/TradeControl/tradecontrol.web).
 
 ## Documentation
 
-- [overview](https://tradecontrol.github.io/tutorials/bitcoin_overview)
-- [installation](https://tradecontrol.github.io/tutorials/installing-bitcoin)
-- [tutorial](https://tradecontrol.github.io/tutorials/bitcoin)
-
-## Donations
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=C55YGUTBJ4N36)
+- [overview](./docs/overview.md)
+- [installation](./docs/installation.md)
+- [instructions](./docs/bitcoin.md)
+- [change log](./docs/changelog.md)
 
 ## Licence
 
